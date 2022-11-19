@@ -1,0 +1,13 @@
+{% extends "cal/layout.html" %}
+
+    {% block body %}
+    <h1>Kalendereinträge</h1>
+    <h3>Beispiel</h3>
+    <ul>
+        {% for day in days %}
+            <li>{{day}}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'cal:add' %}">Neues Datum eintragen</a>
+    {% endblock %}
+
